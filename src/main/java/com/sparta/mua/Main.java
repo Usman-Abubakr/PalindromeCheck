@@ -16,7 +16,12 @@ public class Main {
 
         String[] words = input.split(" ");
         if (words.length == 1) { // check if palindrome
-            isPalindrome(input);
+            if (isPalindrome(input) != 0) {
+                System.out.println(input + " is a palindrome.");
+            }
+            else {
+                System.out.println(input + " is NOT a palindrome.");
+            }
         }
         else { // check longest palindrome
             for (String word : words) {
@@ -24,19 +29,10 @@ public class Main {
                     longestPalindrome = isPalindrome(word);
                     longestPalindromeWord = word;
                 }
-
             }
             System.out.println("The longest palindrome is " + longestPalindromeWord + " with a length of " + longestPalindrome);
         }
-
-
-
-
-
     }
-
-
-
 
 
     public static int isPalindrome(String wordEntered){
@@ -48,12 +44,9 @@ public class Main {
             wordReversed.append(word).reverse();
 
             if ((word.toString()).equals(wordReversed.toString())) {
-                System.out.println(word + " is a palindrome.");
-                System.out.println(word.length());
                 return word.length();
             }
             else {
-                System.out.println(word + " is NOT a palindrome.");
                 return 0;
             }
         }
@@ -67,7 +60,7 @@ public class Main {
             return false;
         }
         else {
-            System.out.println("Word entered: " + word);
+//            System.out.println("Word entered: " + word);
             return true;
         }
     }
