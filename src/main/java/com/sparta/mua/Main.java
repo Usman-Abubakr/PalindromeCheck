@@ -11,6 +11,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
+        palindrome(input);
+    }
+
+
+    public static void palindrome(String input){
+
         int longestPalindrome = 0;
         String longestPalindromeWord = "";
 
@@ -30,12 +36,18 @@ public class Main {
                     longestPalindromeWord = word;
                 }
             }
-            System.out.println("The longest palindrome is " + longestPalindromeWord + " with a length of " + longestPalindrome);
+            if (longestPalindrome == 0) {
+                System.out.println("No palindrome found");
+            }
+            else {
+                System.out.println("The longest palindrome is " + longestPalindromeWord + " with a length of " + longestPalindrome);
+            }
         }
     }
 
 
     public static int isPalindrome(String wordEntered){
+
         StringBuilder word = new StringBuilder();
         StringBuilder wordReversed = new StringBuilder();
 
@@ -55,6 +67,7 @@ public class Main {
 
 
     public static Boolean validateWord(String word){
+
         if (word.length() < 3) {
             System.out.println("Not a valid word!");
             return false;

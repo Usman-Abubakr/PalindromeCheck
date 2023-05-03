@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="327506c2-dcfe-44a7-a61a-0234ad9ddc29" name="Changes" comment="Cleanup">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/mua/MainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/mua/MainTests.java" afterDir="false" />
+    <list default="true" id="327506c2-dcfe-44a7-a61a-0234ad9ddc29" name="Changes" comment="Added more tests">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/mua/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/mua/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MainTests">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sparta.mua.Main" />
       <module name="PalindromeCheck" />
@@ -79,8 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTests" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MainTests" />
         <item itemvalue="Java Scratch.Scratch" />
       </list>
     </recent_temporary>
@@ -150,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683136790714</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added more tests">
+      <created>1683137199525</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683137199525</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -161,6 +169,7 @@
     <MESSAGE value="Palindrome task 1 complete" />
     <MESSAGE value="Complete task 2" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="Added more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more tests" />
   </component>
 </project>
