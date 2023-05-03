@@ -7,24 +7,57 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Enter a word, or sentence separated with a space for each word: ");
         Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        int longestPalindrome = 0;
+        String longestPalindromeWord = "";
+
+        String[] words = input.split(" ");
+        if (words.length == 1) { // check if palindrome
+            isPalindrome(input);
+        }
+        else { // check longest palindrome
+            for (String word : words) {
+                if (isPalindrome(word) > longestPalindrome) {
+                    longestPalindrome = isPalindrome(word);
+                    longestPalindromeWord = word;
+                }
+
+            }
+            System.out.println("The longest palindrome is " + longestPalindromeWord + " with a length of " + longestPalindrome);
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+    public static int isPalindrome(String wordEntered){
         StringBuilder word = new StringBuilder();
-        StringBuilder reversedWord = new StringBuilder();
+        StringBuilder wordReversed = new StringBuilder();
 
-        System.out.println("Please enter a word: ");
-        String enteredWord = scanner.next();
+        if (validateWord(wordEntered)) {
+            word.append(wordEntered.toLowerCase());
+            wordReversed.append(word).reverse();
 
-        if (validateWord(enteredWord)) {
-            word.append(enteredWord.toLowerCase());
-            reversedWord.append(word).reverse();
-
-            if ((word.toString()).equals(reversedWord.toString())) {
+            if ((word.toString()).equals(wordReversed.toString())) {
                 System.out.println(word + " is a palindrome.");
+                System.out.println(word.length());
+                return word.length();
             }
             else {
                 System.out.println(word + " is NOT a palindrome.");
+                return 0;
             }
         }
+        return 0;
     }
 
 
