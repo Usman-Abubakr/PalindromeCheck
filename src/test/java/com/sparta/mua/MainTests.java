@@ -7,15 +7,28 @@ import org.junit.jupiter.api.Test;
 public class MainTests {
 
     @Test
-    @DisplayName("check that racecar return true")
-    void checkGreaterThan3() {
-        Assertions.assertEquals(true, Main.validateWord("racecar"));
+    @DisplayName("check that 123 return true")
+    void checkMinimum() {
+        Assertions.assertEquals(true, Main.validateWord("123"));
     }
 
     @Test
-    @DisplayName("check that racecar return false")
-    void checkLessThan3() {
-        Assertions.assertEquals(false, Main.validateWord("ab"));
+    @DisplayName("check that 12 return false")
+    void checkMinimumFail() {
+        Assertions.assertEquals(false, Main.validateWord("12"));
     }
+
+    @Test
+    @DisplayName("check that racecar return 7")
+    void checkPalindromeTrue() {
+        Assertions.assertEquals(7, Main.isPalindrome("racecar"));
+    }
+
+    @Test
+    @DisplayName("check that racecar return 7")
+    void checkPalindromeFalse() {
+        Assertions.assertEquals(0, Main.isPalindrome("car"));
+    }
+
 
 }
