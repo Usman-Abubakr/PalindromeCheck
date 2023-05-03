@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="327506c2-dcfe-44a7-a61a-0234ad9ddc29" name="Changes" comment="Added tests file">
+    <list default="true" id="327506c2-dcfe-44a7-a61a-0234ad9ddc29" name="Changes" comment="Added tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/mua/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/mua/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/sparta/mua/MainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sparta/mua/MainTests.java" afterDir="false" />
@@ -36,6 +36,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JAVA"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.MainTests">
@@ -67,10 +72,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MainTests" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Java Scratch.Scratch" />
       </list>
     </recent_temporary>
   </component>
@@ -104,12 +117,28 @@
       <option name="project" value="LOCAL" />
       <updated>1683126690969</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added word verification">
+      <created>1683128596115</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683128596115</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added tests">
+      <created>1683128605437</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683128605437</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="Added tests file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests file" />
+    <MESSAGE value="Added word verification" />
+    <MESSAGE value="Added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests" />
   </component>
 </project>
