@@ -11,37 +11,50 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
-        palindrome(input);
+        checkPalindrome(input);
     }
 
 
-    public static void palindrome(String input){
+    public static void checkPalindrome(String input){
 
         int longestPalindrome = 0;
         String longestPalindromeWord = "";
 
         String[] words = input.split(" ");
         if (words.length == 1) { // check if palindrome
-            if (isPalindrome(input) != 0) {
-                System.out.println(input + " is a palindrome.");
-            }
-            else {
-                System.out.println(input + " is NOT a palindrome.");
-            }
+            isSinglePalindrome(input);
         }
         else { // check longest palindrome
-            for (String word : words) {
-                if (isPalindrome(word) > longestPalindrome) {
-                    longestPalindrome = isPalindrome(word);
-                    longestPalindromeWord = word;
-                }
+            isPalindromeSentence(longestPalindrome, longestPalindromeWord, words);
+        }
+    }
+
+
+    private static void isSinglePalindrome(String input) {
+        if (isPalindrome(input) != 0) {
+//            System.out.println(input + " is a palindrome.");
+            print(1,input,0);
+        }
+        else {
+//            System.out.println(input + " is NOT a palindrome.");
+            print(2,input,0);
+        }
+    }
+
+
+    private static void isPalindromeSentence(int longestPalindrome, String longestPalindromeWord, String[] words) {
+        for (String word : words) {
+            if (isPalindrome(word) > longestPalindrome) {
+                longestPalindrome = isPalindrome(word);
+                longestPalindromeWord = word;
             }
-            if (longestPalindrome == 0) {
-                System.out.println("No palindrome found");
-            }
-            else {
-                System.out.println("The longest palindrome is " + longestPalindromeWord + " with a length of " + longestPalindrome);
-            }
+        }
+        if (longestPalindrome == 0) {
+            print(3,"", 0);
+        }
+        else {
+            System.out.println("The longest palindrome is " + longestPalindromeWord + " with a length of " + longestPalindrome);
+//            print(3,longestPalindromeWord);
         }
     }
 
@@ -69,12 +82,32 @@ public class Main {
     public static Boolean validateWord(String word){
 
         if (word.length() < 3) {
-            System.out.println("Not a valid word!");
+            print(0,"",0);
             return false;
         }
         else {
 //            System.out.println("Word entered: " + word);
             return true;
+        }
+    }
+
+
+    private static void print(int printCode, String text, int value) {
+        // should be CASES
+        if (printCode == 0) {
+            System.out.println("Not a valid word!");
+        }
+        else if (printCode == 1) {
+            System.out.println(text + " is a palindrome.");
+        }
+        else if (printCode == 2) {
+            System.out.println(text + " is NOT a palindrome.");
+        }
+        else if (printCode == 3) {
+            System.out.println("No palindrome found.");
+        }
+        else if (printCode == 4) {
+            System.out.println("The longest palindrome is " + text + " with a length of " + value);
         }
     }
 }
